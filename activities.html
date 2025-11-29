@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأنشطة - اسعافك ينقذ حياتي</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* أنماط إضافية للأنشطة */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .activity-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .activity-image {
+            height: 180px;
+            background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .activity-content {
+            padding: 1.5rem;
+        }
+
+        .activity-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .activity-content p {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .game-container {
+            width: 100%;
+            height: 500px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+        }
+
+        .game-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .quiz-container {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+
+
+        }
+
+        .quiz-question {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .quiz-question:last-child {
+            border-bottom: none;
+        }
+
+        .quiz-question h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .quiz-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quiz-option input {
+            margin: 0;
+        }
+
+        .quiz-option label {
+            cursor: pointer;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-color);
+            margin: 3rem 0 1.5rem;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+            margin: 0.5rem auto;
+        }
+
+        .result {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+            /* مخفي في البداية */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">🩹</div>
+                <h1>اسعافك ينقذ حياتي</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">🏠 الرئيسية</a></li>
+                    <li><a href="goals.html">🎯 أهدافنا</a></li>
+                    <li><a href="first-aid.html">📚 تعلم الإسعافات</a></li>
+                    <li><a href="infographic.html">📊 الإنفوجرافيك</a></li>
+                    <li><a href="activities.html" class="active">🎮 الأنشطة</a></li>
+                    <li><a href="test-yourself.html">🧩 اختبر نفسك</a></li>
+                    <li><a href="about.html">👥 من نحن</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="topic-header">
+            <div class="container">
+                <h1>🎮 الأنشطة التفاعلية</h1>
+                <p>تعلم الإسعافات الأولية من خلال الألعاب والأنشطة الممتعة</p>
+            </div>
+        </section>
+
+        <section class="topic-content">
+            <div class="container">
+                <!-- قسم الألعاب التفاعلية -->
+                <h2 class="section-title">🎲 الألعاب التفاعلية</h2>
+
+                <div class="game-container">
+                    <iframe
+                        src="https://view.genially.com/64808564572a710013fa554f/interactive-content-laab-lsaaft-laoly-o-lrmoz"
+                        scrolling="no">
+                    </iframe>
+
+                </div>
+
+
+
+                <!-- قسم الاختبارات -->
+                <h2 class="section-title">🧪 اختبر معرفتك</h2>
+
+                <div class="quiz-container">
+                    <h3 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">🧠 اختبر معرفتك
+                        بالإسعافات الأولية</h3>
+
+                    <div class="quiz-question">
+                        <h3>1. ماذا تفعل إذا رأيت شخصًا مصابًا بحروق؟</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option">
+                                <input type="radio" id="q1a1" name="q1" value="a">
+                                <label for="q1a1">أضع الثلج مباشرة على الحرق</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q1a2" name="q1" value="b">
+                                <label for="q1a2">أضع الزبدة أو الزيت على الحرق</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q1a3" name="q1" value="c">
+                                <label for="q1a3">أضع المنطقة المصابة تحت ماء بارد جاري</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q1a4" name="q1" value="d">
+                                <label for="q1a4">أنتظر حتى يزول الألم وحده</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h3>2. كيف تتصرف مع شخص أصيب بنزيف حاد؟</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option">
+                                <input type="radio" id="q2a1" name="q2" value="a">
+                                <label for="q2a1">أضع قطعة قماش نظيفة وأضغط على الجرح</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q2a2" name="q2" value="b">
+                                <label for="q2a2">أستخدم رباطًا ضاغطًا جدًا لإيقاف النزيف</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q2a3" name="q2" value="c">
+                                <label for="q2a3">أترك النزيف يتوقف وحده</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q2a4" name="q2" value="d">
+                                <label for="q2a4">أضع المنطقة المصابة في ماء ساخن</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h3>3. ماذا تفعل إذا رأيت شخصًا فاقدًا للوعي؟</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option">
+                                <input type="radio" id="q3a1" name="q3" value="a">
+                                <label for="q3a1">أهزه بقوة لأوقظه</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q3a2" name="q3" value="b">
+                                <label for="q3a2">أتركه وأذهب لطلب المساعدة</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q3a3" name="q3" value="c">
+                                <label for="q3a3">أتحقق من التنفس ثم أطلب المساعدة الطبية</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q3a4" name="q3" value="d">
+                                <label for="q3a4">أعطيه ماء أو طعام ليستعيد وعيه</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-actions" style="text-align: center;">
+                        <button id="submit-quiz" class="btn btn-primary">📤 تقديم الإجابات</button>
+                    </div>
+
+                    <div id="result" class="result"></div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>اسعافك ينقذ حياتي</h3>
+                    <p>نعلم الأطفال كيفية مساعدة الآخرين في حالات الطوارئ</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="first-aid.html">تعلم الإسعافات</a></li>
+                        <li><a href="activities.html">الأنشطة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <p>info@firstaid-kids.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 موقع اسعافك ينقذ حياتي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // دالة لتقييم الاختبار
+        function submitQuiz() {
+            const answers = {
+                q1: 'c',
+                q2: 'a',
+                q3: 'c'
+            };
+
+            let score = 0;
+            let totalQuestions = Object.keys(answers).length;
+
+            // التحقق من الإجابات
+            for (let question in answers) {
+                const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedOption && selectedOption.value === answers[question]) {
+                    score++;
+                }
+            }
+
+            // عرض النتيجة
+            const resultDiv = document.getElementById('result');
+            const percentage = (score / totalQuestions) * 100;
+
+            let message = '';
+            if (percentage >= 80) {
+                message = `<div style="background-color: #d4edda; color: #155724; padding: 1rem; border-radius: 8px; text-align: center;">
+                            <h3>🎉 ممتاز!</h3>
+                            <p>لقد أجبت على ${score} من ${totalQuestions} أسئلة بشكل صحيح.</p>
+                            <p>مستوى معرفتك بالإسعافات الأولية رائع!</p>
+                          </div>`;
+            } else if (percentage >= 60) {
+                message = `<div style="background-color: #fff3cd; color: #856404; padding: 1rem; border-radius: 8px; text-align: center;">
+                            <h3>👏 جيد!</h3>
+                            <p>لقد أجبت على ${score} من ${totalQuestions} أسئلة بشكل صحيح.</p>
+                            <p>يمكنك تحسين معرفتك بمراجعة دروس الإسعافات الأولية.</p>
+                          </div>`;
+            } else {
+                message = `<div style="background-color: #f8d7da; color: #721c24; padding: 1rem; border-radius: 8px; text-align: center;">
+                            <h3>📚 تحتاج للمزيد من التعلم</h3>
+                            <p>لقد أجبت على ${score} من ${totalQuestions} أسئلة بشكل صحيح.</p>
+                            <p>ننصحك بمراجعة دروس الإسعافات الأولية ثم المحاولة مرة أخرى.</p>
+                          </div>`;
+            }
+
+            resultDiv.innerHTML = message;
+            resultDiv.style.display = 'block';
+
+            // تمرير النتيجة إلى الأعلى
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // إضافة مستمع الحدث للزر
+        document.addEventListener('DOMContentLoaded', function () {
+            const submitButton = document.getElementById('submit-quiz');
+            submitButton.addEventListener('click', submitQuiz);
+        });
+    </script>
+</body>
+
+</html>
